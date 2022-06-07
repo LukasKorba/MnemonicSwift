@@ -10,7 +10,7 @@ import Crypto
 import Foundation
 import Security
 
-public enum MnemonicLanguageType {
+public enum MnemonicLanguageType: Codable, Equatable {
     case english
     case chinese
 
@@ -276,3 +276,4 @@ extension Array where Element == UInt8 {
         self.map { String(format: "%02x", $0) }.joined()
     }
 }
+//
